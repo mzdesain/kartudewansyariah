@@ -30,7 +30,7 @@ body {
 .text-overlay {
     position: absolute;
     width: 100%;
-    bottom: 10%; /* Agar tetap proporsional */
+    bottom: 15%; /* Agar tetap proporsional */
     left: 0;
     text-align: center;
     color: #fff;
@@ -39,12 +39,12 @@ body {
 
 .name {
     font-weight: bold;
-    font-size: 16px; /* Lebih besar agar lebih terbaca */
+    font-size: 12px; /* Lebih besar agar lebih terbaca */
     color: rgb(0, 0, 0);
 }
 
 .position {
-    font-size: 12px; /* Lebih besar agar lebih terbaca */
+    font-size: 9px; /* Lebih besar agar lebih terbaca */
     color: rgb(0, 0, 0);
 }
 
@@ -93,7 +93,7 @@ button:disabled {
     .text-overlay {
     position: absolute;
     width: 100%;
-    bottom: 18%; /* Dinaikkan agar mendekati garis */
+    bottom: 14%; /* Dinaikkan agar mendekati garis */
     left: 0;
     text-align: center;
     color: #fff;
@@ -103,7 +103,7 @@ button:disabled {
 
 @media (max-width: 480px) {
     .text-overlay {
-        bottom: 20%; /* Tambah naik untuk layar kecil */
+        bottom: 14%; /* Tambah naik untuk layar kecil */
         transform: translateY(-15%);
     }
 }
