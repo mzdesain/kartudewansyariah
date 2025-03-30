@@ -6,7 +6,7 @@ body {
 }
 
 .wrapper {
-    max-width: 400px;
+    max-width: 100%;
     margin: auto;
     background: #fff;
     padding: 20px;
@@ -17,38 +17,35 @@ body {
 .container {
     position: relative;
     display: inline-block;
-    width: 400px;
-    height: 500px;
+    width: 100%;
+    max-width: 400px; /* Maksimal 400px, tetapi bisa mengecil di layar kecil */
 }
 
 .twibbon-img {
-    width: 400px;
-    height: 500px;
+    width: 100%; /* Agar bisa menyesuaikan dengan container */
+    height: auto; /* Agar proporsi tetap sesuai */
     border-radius: 10px;
 }
 
 .text-overlay {
     position: absolute;
     width: 100%;
-    bottom: 75px;
+    bottom: 10%; /* Agar tetap proporsional */
     left: 0;
     text-align: center;
     color: #fff;
-    font-size: 12px;
     line-height: 1.1;
 }
 
 .name {
     font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    color:rgb(0, 0, 0)
+    font-size: 16px; /* Lebih besar agar lebih terbaca */
+    color: rgb(0, 0, 0);
 }
 
 .position {
-    font-size: 8px;
-    font-family: 'Montserrat', sans-serif;
-    color:rgb(0, 0, 0)
+    font-size: 12px; /* Lebih besar agar lebih terbaca */
+    color: rgb(0, 0, 0);
 }
 
 .input-section {
@@ -70,7 +67,6 @@ input {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
-    font-family: 'Montserrat', Montserrat, sans-serif;
 }
 
 button {
@@ -88,28 +84,21 @@ button:disabled {
     cursor: not-allowed;
 }
 
-.social-icons {
-    margin-top: 15px;
-}
+/* Responsif untuk layar kecil */
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 15px;
+    }
 
-.social-icons a {
-    margin: 0 10px;
-    font-size: 24px;
-    text-decoration: none;
-}
+    .text-overlay {
+        bottom: 8%; /* Sedikit dinaikkan di layar kecil */
+    }
 
-.fa-facebook { color:rgb(44, 100, 254); }
-.fa-instagram { color: #E4405F; }
-.fa-youtube { color: #FF0000; }
+    .name {
+        font-size: 14px; /* Menyesuaikan agar tetap terbaca */
+    }
 
-.source {
-    margin-top: 15px;
-    font-size: 10px;
-    opacity: 0.75;
-}
-
-.source a {
-    text-decoration: none;
-    color: #084a63;
-    font-weight: bold;
+    .position {
+        font-size: 10px;
+    }
 }
