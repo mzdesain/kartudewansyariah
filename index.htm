@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tahniah Idulfitri 1446 H</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container" id="twibbonContainer">
+            <img id="twibbonImg" class="twibbon-img" src="Tahniah Dewan Syariah.jpg" alt="Twibbon">
+            <div class="text-overlay">
+                <div id="name" class="name">Nama</div>
+                <div id="position" class="position">Keterangan</div>
+            </div>
+        </div>
+        
+        <div class="input-section">
+            <input type="text" id="inputName" placeholder="Masukkan Nama" oninput="updateText()">
+            <input type="text" id="inputPosition" placeholder="Keterangan" oninput="updateText()">
+            <button id="downloadBtn" onclick="downloadTwibbon()" disabled>Simpan ke Galeri</button>
+        </div>
+        
+        <div class="social-icons">
+            <a href="https://web.facebook.com/dewansyariahwi" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/dewansyariah" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@dewansyariahwahdahislamiya8116" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        
+        <div class="source">
+            Dewan Syariah Wahdah Islamiyah
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

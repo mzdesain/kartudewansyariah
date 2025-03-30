@@ -1,0 +1,115 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.wrapper {
+    max-width: 400px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+}
+
+.twibbon-img {
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.text-overlay {
+    position: absolute;
+    width: 100%;
+    bottom: 75px;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.1;
+}
+
+.name {
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color:rgb(0, 0, 0)
+}
+
+.position {
+    font-size: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color:rgb(0, 0, 0)
+}
+
+.input-section {
+    margin-top: 15px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-section input,
+.input-section button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Montserrat', Montserrat, sans-serif;
+}
+
+button {
+    padding: 10px;
+    background-color: #004572;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.fa-facebook { color:rgb(44, 100, 254); }
+.fa-instagram { color: #E4405F; }
+.fa-youtube { color: #FF0000; }
+
+.source {
+    margin-top: 15px;
+    font-size: 10px;
+    opacity: 0.75;
+}
+
+.source a {
+    text-decoration: none;
+    color: #084a63;
+    font-weight: bold;
+}
