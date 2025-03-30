@@ -91,14 +91,19 @@ button:disabled {
     }
 
     .text-overlay {
-        bottom: 15%; /* Sedikit dinaikkan di layar kecil */
-    }
+    position: absolute;
+    width: 100%;
+    bottom: 18%; /* Dinaikkan agar mendekati garis */
+    left: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 1.1;
+    transform: translateY(-10%); /* Menaikkan posisi teks secara fleksibel */
+}
 
-    .name {
-        font-size: 14px; /* Menyesuaikan agar tetap terbaca */
-    }
-
-    .position {
-        font-size: 10px;
+@media (max-width: 480px) {
+    .text-overlay {
+        bottom: 20%; /* Tambah naik untuk layar kecil */
+        transform: translateY(-15%);
     }
 }
