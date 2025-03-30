@@ -23,7 +23,6 @@ async function downloadTwibbon() {
     try {
         let img = await loadImage(twibbonImg.src);
 
-        // Menggunakan ukuran asli gambar
         let CANVAS_WIDTH = img.width;
         let CANVAS_HEIGHT = img.height;
 
@@ -39,21 +38,22 @@ async function downloadTwibbon() {
         ctx.fillStyle = "#000000";
         ctx.textAlign = "center";
 
-        // **Menyesuaikan ukuran font berdasarkan tinggi canvas**
-        const nameFontSize = CANVAS_HEIGHT * 0.06;  // 6% dari tinggi canvas
-        const positionFontSize = CANVAS_HEIGHT * 0.04;  // 4% dari tinggi canvas
-        
+        const nameFontSize = CANVAS_HEIGHT * 0.06;
+        const positionFontSize = CANVAS_HEIGHT * 0.04;
+
         ctx.font = `bold ${nameFontSize}px 'Montserrat', sans-serif`;
-        const nameY = CANVAS_HEIGHT - (CANVAS_HEIGHT * 0.16);
+
+        // **Naikkan teks lebih dekat ke garis desain twibbon**
+        const nameY = CANVAS_HEIGHT - (CANVAS_HEIGHT * 0.22); // Dinaikkan dari sebelumnya
         ctx.fillText(inputName.value || "Nama", CANVAS_WIDTH / 2, nameY);
 
-        ctx.font = `${positionFontSize}px 'Montserrat', sans-serif`; // Font reguler
-        const positionY = nameY + (1.1 * positionFontSize); // Jarak antara nama dan keterangan
+        ctx.font = `${positionFontSize}px 'Montserrat', sans-serif`;
+        const positionY = nameY + (1.1 * positionFontSize); 
         ctx.fillText(inputPosition.value || "Keterangan", CANVAS_WIDTH / 2, positionY);
 
         let link = document.createElement("a");
         link.href = canvas.toDataURL("image/png");
-        link.download = "Kartu ID Dewan Syariah WI.png";
+        link.download = "Twibbon.png";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -61,3 +61,4 @@ async function downloadTwibbon() {
         alert(error.message);
     }
 }
+
