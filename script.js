@@ -38,17 +38,18 @@ async function downloadTwibbon() {
         ctx.fillStyle = "#000000";
         ctx.textAlign = "center";
 
-        const nameFontSize = CANVAS_HEIGHT * 0.06;
-        const positionFontSize = CANVAS_HEIGHT * 0.04;
+        // **Gunakan ukuran font dari CSS dengan perbandingan 400px sebagai referensi**
+        const nameFontSize = (10 / 400) * CANVAS_HEIGHT;
+        const positionFontSize = (8 / 400) * CANVAS_HEIGHT;
 
         ctx.font = `bold ${nameFontSize}px 'Montserrat', sans-serif`;
 
-        // **Naikkan teks lebih dekat ke garis desain twibbon**
-        const nameY = CANVAS_HEIGHT - (CANVAS_HEIGHT * 0.22); // Dinaikkan dari sebelumnya
+        // **Naikkan teks agar lebih dekat ke garis desain Twibbon**
+        const nameY = CANVAS_HEIGHT - (CANVAS_HEIGHT * 0.17);
         ctx.fillText(inputName.value || "Nama", CANVAS_WIDTH / 2, nameY);
 
         ctx.font = `${positionFontSize}px 'Montserrat', sans-serif`;
-        const positionY = nameY + (1.1 * positionFontSize); 
+        const positionY = nameY + (1.1 * positionFontSize);
         ctx.fillText(inputPosition.value || "Keterangan", CANVAS_WIDTH / 2, positionY);
 
         let link = document.createElement("a");
@@ -61,4 +62,3 @@ async function downloadTwibbon() {
         alert(error.message);
     }
 }
-
