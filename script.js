@@ -54,7 +54,7 @@ async function downloadTwibbon() {
 
         let link = document.createElement("a");
         link.href = canvas.toDataURL("image/png");
-        link.download = "Twibbon.png";
+        link.download = "Kartu ID Dewan Syariah WI.png";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
