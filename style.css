@@ -91,7 +91,7 @@ button:disabled {
     }
 
     .text-overlay {
-        bottom: 8%; /* Sedikit dinaikkan di layar kecil */
+        bottom: 15%; /* Sedikit dinaikkan di layar kecil */
     }
 
     .name {
